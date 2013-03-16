@@ -3,7 +3,7 @@
 
   server = 'http://romansixty.github.com/src-img/';
 
-  libs = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', 'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js', "" + server + "/js/lib/URI.js"];
+  libs = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', "" + server + "/js/lib/URI.js"];
 
   sourceImage = {
     exit: function(e) {
