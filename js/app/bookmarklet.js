@@ -1,20 +1,15 @@
 (function() {
-  var analyticsID, checkForRequire, libs, loadLibs, server, sourceImage;
+  var checkForRequire, libs, loadLibs, server, sourceImage;
 
-  server = 'http://jarred.github.com/src-img/';
+  server = 'http://romansixty.github.com/src-img/';
 
-  analyticsID = 'UA-4516491-29';
-
-  libs = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', 'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js', "" + server + "/js/lib/URI.js", "http://www.google-analytics.com/ga.js"];
+  libs = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', 'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js', "" + server + "/js/lib/URI.js"];
 
   sourceImage = {
     exit: function(e) {
       $('a.src-img').remove();
       $('a.src-img-close').remove();
       e.preventDefault();
-    },
-    trackClick: function(e) {
-      _gaq.push(['src-img-tracker._trackEvent', 'site', 'click', window.location.hostname]);
     },
     init: function() {
       var $style, close, count, flickrHost,
@@ -26,10 +21,6 @@
         type: 'text/css'
       });
       $('head').append($style);
-      _gaq.push(function() {
-        this.tracker = _gat._createTracker(analyticsID, 'src-img-tracker');
-      });
-      _gaq.push(['src-img-tracker._trackEvent', 'site', 'open', window.location.hostname]);
       count = 0;
       flickrHost = /flickr.com/i.test(window.location.hostname);
       $.each($('img'), function(index, img) {
@@ -47,7 +38,6 @@
         }
         $('body').append("      <a class=\"src-img\" style=\"width:" + ($img.width()) + "px;height:" + ($img.height()) + "px;top:" + ($img.offset().top) + "px;left:" + ($img.offset().left) + "px;\" href=\"" + searchUrl + "\" target=\"_blank\"><span>&#63;&iquest;</span></a>      ");
       });
-      $('a.src-img').bind('click', this.trackClick);
       if (count === 0) {
         alert('I couldn\'t find any images :(');
         return;

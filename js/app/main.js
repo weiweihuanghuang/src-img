@@ -4,8 +4,8 @@
   srcImg = window.SrcImg || (window.SrcImg = {});
 
   srcImg.Main = {
-    server: 'http://jarred.github.com/src-img',
-    version: 0.66,
+    server: 'http://romansixty.github.com/src-img',
+    version: 0.67,
     init: function() {
       _.bindAll(this);
       this.writeBookmarklet();
