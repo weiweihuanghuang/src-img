@@ -1,9 +1,9 @@
 (function() {
   var checkForRequire, libs, loadLibs, server, sourceImage;
 
-  server = 'http://romansixty.github.com/src-img/';
+  server = '//weiweihuanghuang.github.com/src-img/';
 
-  libs = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', "" + server + "/js/lib/URI.js"];
+  libs = ['//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js', "" + server + "/js/lib/URI.js"];
 
   sourceImage = {
     exit: function(e) {
