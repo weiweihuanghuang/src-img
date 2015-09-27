@@ -2,7 +2,7 @@
 
 src-img is a bookmarklet that interfaces with Google Image Search to help you credit images.
 
-[Check it out.](http://romansixty.github.com/src-img/)
+[Check it out.](http://weiweihuanghuang.github.com/src-img/)
 
 Original bookmarklet by [jarred](http://jarred.github.com/src-img/)
 
